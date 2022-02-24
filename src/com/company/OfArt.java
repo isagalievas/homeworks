@@ -1,29 +1,49 @@
 package com.company;
 
 public class OfArt extends Department {
-    String name;
-    int numberOfBooks;
 
-    public OfArt(String name, int numberOfBooks) {
-        this.name = name;
-        this.numberOfBooks = numberOfBooks;
+    private Books[] books;
+    private int count = 0;
+
+    public OfArt() {
     }
 
-    public String getName() {
-        return name;
+    public OfArt(String name, int size, Books[] books) {
+        super(name);
+        int chek = 0;
+        this.books = new Books[size];
+        for (int i = 0; i < this.books.length; i++) {
+            if (this.books[i] == null) {
+                this.books[i] = books[i];
+                chek++;
+                count++;
+                if (books.length == chek) break;
+
+            }
+        }
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setNumberOfBooks(int numberOfBooks) {
-        this.numberOfBooks = numberOfBooks;
-    }
 
     @Override
     public String toString() {
-        String message = "Название книги " + this.name + ". Количество книги " + this.numberOfBooks;
-        return message;
+        return "Имя: " + getName() + "\nКоличество книг: " + count;
+    }
+
+    public Books[] getBooks() {
+        return books;
+    }
+
+    public void setBooks(Books[] books) {
+        this.books = books;
+    }
+
+    @Override
+    public int getCount() {
+        return count;
+    }
+
+    @Override
+    public void setCount(int count) {
+        this.count = count;
     }
 }

@@ -1,40 +1,46 @@
 package com.company;
 
 public class Books {
-    private char identifier;
+    private int id;
     private String autor;
-    private String title;
-    private String yearOfManufacture;
+    private String date;
 
-    public char getIdentifier() {
-        return identifier;
+    public Books(int id, String autor, String date) {
+        this.id = id;
+        this.autor = autor;
+        this.date = date;
     }
 
-    public void setIdentifier(char identifier) {
-        this.identifier = identifier;
+    @Override
+    public String toString() {
+        return "Books{" +
+                "id=" + id +
+                ", автор ='" + autor + '\'' +
+                ", год выпуска ='" + date + '\'' +
+                '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getAutor() {
         return autor;
     }
 
-    public void setAutor(String autor) {
+    public void setautor(String autor) {
         this.autor = autor;
     }
 
-    public String getTitle() {
-        return title;
+    public String getDate() {
+        return date;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getYearOfManufacture() {
-        return yearOfManufacture;
-    }
-
-    public void setYearOfManufacture(String yearOfManufacture) {
-        this.yearOfManufacture = yearOfManufacture;
+    public void setDate(String date) {
+        this.date = date;
     }
 }
