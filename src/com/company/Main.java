@@ -3,16 +3,18 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        final double PI = 3.14;
-        int radius = 5;
-
-        int array[] = new int[10];
-        for (int i = 1; i < array.length; i++){
-            array[i] = i;
+        Circle[] circles = new Circle[10];
+        for (int i = 1; i < circles.length + 1; i++) {
+            circles[i - 1] = new Circle(i);
         }
+        int countingMultipleLapsOfThree = 0;
+        for (Circle circle : circles) {
+            if (circle.calculateTheAreaOfTheCircle() % 3 == 0) {
+                countingMultipleLapsOfThree++;
+            }
+            System.out.println(circle.calculateTheAreaOfTheCircle());
+        }
+        System.out.println(countingMultipleLapsOfThree);
 
-        double area = Math.PI * radius * radius;
-        System.out.println("Площадь круга равна: " + area);
     }
 }
-
