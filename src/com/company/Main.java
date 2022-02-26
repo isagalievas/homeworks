@@ -30,7 +30,5 @@ public class Main {
         orders.add(newOrder);
 
         System.out.println(orders);
-        System.out.println(newProduct);
-
     }
 }
