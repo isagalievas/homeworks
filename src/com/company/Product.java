@@ -14,4 +14,10 @@ public class Product {
     public void setType(ProductType type) {
         this.type = type;
     }
+
+    @Override
+    public String toString() {
+        return "Product {name = " + name +
+                ", type = " + type;
+    }
 }

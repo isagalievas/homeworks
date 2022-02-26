@@ -30,5 +30,9 @@ public class Main {
 
         orders.add(newOrder);
 
+
+        System.out.println(newOrder);
+        System.out.println(newProduct);
+
     }
 }
