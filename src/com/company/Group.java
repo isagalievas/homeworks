@@ -63,11 +63,11 @@ public class Group {
 
     @Override
     public String toString() {
-        return "Group {" +
-                "groupName ='" + groupName + '\'' +
-                ", course ='" + course + '\'' +
-                ", numberOfGroup = " + numberOfGroup +
-                ", students = " + students +
+        return "Group{" +
+                "groupName='" + groupName + '\'' +
+                ", course='" + course + '\'' +
+                ", numberOfGroup=" + numberOfGroup +
+                ", students=" + students +
                 '}';
     }
 }
