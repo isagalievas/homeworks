@@ -27,11 +27,9 @@ public class Main {
         newOrder.setProducts(new ArrayList<>());
         newOrder.getProducts().add(newProduct);
 
-
         orders.add(newOrder);
 
-
-        System.out.println(newOrder);
+        System.out.println(orders);
         System.out.println(newProduct);
 
     }
