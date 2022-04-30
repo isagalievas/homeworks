@@ -11,8 +11,8 @@ public class Main {
         System.out.println("Введите числа:");
         String numbers = scanner.next();
         Set<Character> set = new HashSet<>();
-        for(int i = 0; i < numbers.length(); i++){
-            if (numbers.charAt(i) == ','){
+        for (int i = 0; i < numbers.length(); i++) {
+            if (numbers.charAt(i) == ',') {
                 continue;
             }
             set.add(numbers.charAt(i));
