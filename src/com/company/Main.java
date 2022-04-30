@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -8,10 +7,16 @@ import java.util.Set;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Введите число (ПРИМЕР 1 2 3 4 4 5 ...): ");
-        String numbers = new Scanner(System.in).nextLine();
-        Set<String> set = new HashSet<>();
-        set.addAll(Arrays.asList(numbers.split(" ")));
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите числа");
+        String numbers = scanner.next();
+        Set<Character> set = new HashSet<>();
+        for(int i = 0; i < numbers.length(); i++){
+            if (numbers.charAt(i) == ','){
+                continue;
+            }
+            set.add(numbers.charAt(i));
+        }
         System.out.println(set);
     }
 }
