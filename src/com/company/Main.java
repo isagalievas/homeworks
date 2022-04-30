@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите числа");
+        System.out.println("Введите числа:");
         String numbers = scanner.next();
         Set<Character> set = new HashSet<>();
         for(int i = 0; i < numbers.length(); i++){
